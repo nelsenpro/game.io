@@ -149,3 +149,9 @@ Kumpulkan koin, selesaikan tugas, dan dapatkan airdrop. Konversikan koin ke mata
 
 ## 49. BBQ Coin
 [Mainkan](https://t.me/BBQcoin_bot/BBQcoin?startapp=r_1873657618)
+
+## 50. TON Boost
+[Mainkan](https://t.me/tonboost_app_bot?start=7992f61e)
+
+## 51. Simple Tap Coin
+[Mainkan](https://t.me/Simple_Tap_Bot/app?startapp=1719898023718)
