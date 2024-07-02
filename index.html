@@ -75,7 +75,7 @@
         }
 
         .game:hover {
-            transform: translateY(-5px);
+            transform: translateY(-15px);
         }
 
         .game h2 {
@@ -120,7 +120,7 @@
         }
 
         .game a:hover {
-            filter: brightness(85%);
+            filter: brightness(95%);
         }
 
 @media (max-width: 600px) {
@@ -381,6 +381,15 @@
             <h2><sup>49.</sup> Pepe Kombat</h2>
             <a href="https://t.me/pepekombat_bot/app?startapp=M4ZN6WNZQ" target="_blank" class="button-info">Mainkan</a>
         </div>
+        
+        <div class="game">
+            <h2><sup>50.</sup> TON Boost</h2>
+            <a href="https://t.me/tonboost_app_bot?start=7992f61e" target="_blank" class="button-warning">Mainkan</a>
+        </div>
+        <div class="game">
+            <h2><sup>51.</sup> Simple Tap Coin</h2>
+            <a href="https://t.me/Simple_Tap_Bot/app?startapp=1719898023718" target="_blank" class="button-dark">Mainkan</a>
+        </div>
 <!--
         <div class="game">
             <h2><sup>40.</sup> Tronix</h2>
@@ -429,5 +438,43 @@
             <a href="https://t.me/dedustBot" target="_blank">Dedust</a> |
         </h4>
     </footer>
+    
+    <script>
+    function ubahTombol(button) {
+        button.style.backgroundColor = "#009688"; /* Teal */
+        button.style.color = "#FFFFFF";
+        button.style.border = "2px solid #009688";
+        button.textContent = "Telah Dipilih";
+    }
+
+    const buttons = document.querySelectorAll('.game a');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            ubahTombol(button);
+        });
+    });
+</script>
+
+<!--
+function ubahTombol(button) {
+    button.style.backgroundColor = "#008080";
+    button.style.color = "#FFFFFF";
+    button.style.border = "2px solid #008080";
+    button.textContent = "Telah Dipilih";
+    
+    localStorage.setItem(button.id, "selected");
+}
+
+const buttons = document.querySelectorAll('.game a');
+buttons.forEach(button => {
+    if (localStorage.getItem(button.id) === "selected") {
+        ubahTombol(button);
+    }
+
+    button.addEventListener('click', function() {
+        ubahTombol(button);
+    });
+});
+-->
 </body>
 </html>
