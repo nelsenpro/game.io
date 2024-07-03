@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games di Telegram yang Menghasilkan Uang</title>
+    <title>Game Telegram Penghasil Uang</title>
     <style>
 :root {
         --primary: #007bff;
@@ -26,30 +26,38 @@
             color: #333;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+        }
+        .container {
+            
         }
 
         header {
             text-align: center;
             margin-bottom: 20px;
+            padding: 20px;
+            background-color: #333;
         }
 
         h1 {
-            color: #444;
+            color: #fff;
         }
         footer {
+            background-color: #333;
+            padding: 20px;
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
             padding-top: 10px;
             border-top: 1px solid #ddd;
         }
 
-        footer p {
+        footer h4 {
             margin-bottom: 10px;
+            color: #fff;
         }
 
         footer a {
-            color: #007bff;
+            color: yellow;
             text-decoration: none;
         }
 
@@ -58,6 +66,7 @@
         }
 
         .games-container {
+            padding: 20px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -128,15 +137,48 @@
                 width: 100%;
             }
         }
+        
+        #scrollToTopBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 8px;
+  padding: 10px;
+  font-size: 40px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #0056b3;
+}
+.info {
+    color: #3fa;
+}
     </style>
+    <link rel="icon" href="#" type="image/x-icon">
+    <script src="sweetalert2@11.js"></script>
 </head>
 <body>
     <header>
-        <h1>Games di Telegram yang Menghasilkan Uang</h1>
-        <p>
-            Kumpulkan koin, selesaikan tugas, dan dapatkan airdrop. Konversikan koin ke mata uang kripto atau USDT, lalu tukar ke IDR.
+        <h1>Game Telegram Penghasil Uang</h1>
+        <p class="info">
+            Kumpulkan koin, dapatkan airdrop, konversi ke kripto (USDT), tukar ke IDR.
         </p>
     </header>
+    
+    <script>
+    Swal.fire({
+        icon: 'info',
+        //title: 'Halo',
+        text: 'Jika link tidak berfungsi, Coba Buka di Chrome',
+        confirmButtonText: 'OK'
+    });
+</script>
+    
+    <button onclick="scrollToTop()" id="scrollToTopBtn">^</button>
 
     <div class="games-container">
         <div class="game">
@@ -429,13 +471,15 @@
             |
             <a href="https://t.me/clgames_az" target="_blank">Join Grup</a>
 |
+            <a href="https://t.me/herewalletbot/app?startapp=18016620" target="_blank">H-Wallet</a>
+|
             <a href="https://t.me/wallet?startattach" target="_blank">T-Wallet</a>
 |
             <a href="https://t.me/tapps_bot/center" target="_blank">T-Apps</a>
             |
-            <a href="https://t.me/ston_fi" target="_blank">Ston_fi</a>
+            <a href="https://t.me/ston_fi" target="_blank">Ston.Fi</a>
 |
-            <a href="https://t.me/dedustBot" target="_blank">Dedust</a> |
+            <a href="https://t.me/dedustBot" target="_blank">Dedust.io</a> |
         </h4>
     </footer>
     
@@ -476,5 +520,28 @@ buttons.forEach(button => {
     });
 });
 -->
+
+<script type="text/javascript" charset="utf-8">
+    window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+  if (currentPosition > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, currentPosition - currentPosition / 8);
+  }
+}
+</script>
 </body>
 </html>
