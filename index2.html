@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .summary-container {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            width: 100%;
+            margin: 20px;
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .summary-container:hover {
+            transform: scale(1.05);
+        }
+
+        .summary-header {
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+        }
+
+        .summary-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .summary-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .summary-content button {
+            background: #2575fc;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+        }
+
+        .summary-content button:hover {
+            background: #6a11cb;
+        }
+
+        .summary-content button a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Different header colors */
+        .summary-header-1 {
+            background: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+        }
+        .summary-header-2 {
+            background: linear-gradient(135deg, #0fd850 0%, #f9f047 100%);
+        }
+        .summary-header-3 {
+            background: linear-gradient(135deg, #f4c4f3 0%, #fc67fa 100%);
+        }
+        .summary-header-4 {
+            background: linear-gradient(135deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+        }
+        .summary-header-5 {
+            background: linear-gradient(135deg, #fddb92 0%, #d1fdff 100%);
+            color: black;
+        }
+        .summary-header-6 {
+            background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+            color: black;
+        }
+        .summary-header-7 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .summary-header-8 {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+        .summary-header-9 {
+            background: linear-gradient(135deg, #f83600 0%, #f9d423 100%);
+        }
+        .summary-header-10 {
+            background: linear-gradient(135deg, #ee9ca7 0%, #ffdde1 100%);
+            color: black;
+        }
+        .summary-header-11 {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+        }
+        .summary-header-12 {
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+        .summary-header-13 {
+            background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+        }
+        .summary-header-14 {
+            background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+        }
+        .summary-header-15 {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: black;
+        }
+        .summary-header-16 {
+            background: linear-gradient(135deg, #fdcbf1 0%, #e6dee9 100%);
+        }
+        .summary-header-17 {
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+        .summary-header-18 {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+            color: black;
+        }
+        .summary-header-19 {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+        }
+        .summary-header-20 {
+            background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
+        }
+        .summary-header-21 {
+            background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);
+            color: black;
+        }
+        .summary-header-22 {
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+        }
+        .summary-header-23 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .summary-header-24 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .summary-header-25 {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        .summary-header-26 {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: black;
+        }
+        .summary-header-27 {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+        .summary-header-28 {
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+        }
+        .summary-header-29 {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+        }
+        .summary-header-30 {
+            background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%);
+        }
+        .black {
+            color: black !important;
+        }
+    </style>
+</head>
+<body>
+      <div class="summary-container">
+        <div class="summary-header summary-header-1 summary-content">
+            <button>
+                <a href="https://nelsenpro.github.io/game.io/index.html" target="_blank"><< Kembali ke Halaman 1</a>
+            </button>
+        </div>
+    </div>
+    
+    
+    <div class="summary-container">
+        <div class="summary-header summary-header-1">
+            <h2> <sup>52.</sup> Nomis App</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/NomisAppBot/app?startapp=ref_iZ7m7_akze" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-2 black">
+            <h2><sup>53.</sup> Strongcoin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/StrongcoinBot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-4">
+            <h2><sup>54.</sup> Sheep Swap</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/sheep_swapbot?start=19hc4xhl7ipm" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-5">
+            <h2><sup>55.</sup> Meme Town</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/MemeTownBot/app?startapp=ref_rS4Ycx" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-6">
+            <h2><sup>56.</sup> Labi Zoo</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/tabizoobot/tabizoo?startapp=3rZz8h" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-7">
+            <h2><sup>57.</sup> Oxygen Miner</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/oxygenminerbot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-8">
+            <h2><sup>58.</sup> Fuel Jetton</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/fueljetton_bot/app?startapp=1873657618">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-9">
+            <h2><sup>59.</sup> Mingle</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/mingle_app_bot/app?startapp=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-10">
+            <h2><sup>60.</sup> MMpro Bump</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/MMproBump_bot?start=ref_1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-11 black">
+            <h2><sup>61.</sup> Major</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/major/start?startapp=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-12 black">
+            <h2><sup>62.</sup> Rocky Rabbit</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/rocky_rabbit_bot/play?startapp=frId1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-13 black">
+            <h2><sup>63.</sup> Whycoin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/whycoinorgbot/whycoin?startapp=zotwci" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-14 black">
+            <h2><sup>64.</sup> TON Turbo</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/TONTurbo_bot?start=8cc34d63" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-15">
+            <h2><sup>65.</sup> Swopin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/swopin_bot/swopin?startapp=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-16 black">
+            <h2><sup>66.</sup> Fintopio</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://fintop.io/6fZwNHr" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-17 black">
+            <h2><sup>67.</sup> Evmbridge (EVM) </h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="http://t.me/Evmbridgebot/evm?startapp=ref_57479" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-18">
+            <h2><sup>68.</sup> Match Quest</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/MatchQuestBot/start?startapp=d2919e4ef10485051e293d1d81aebd0d" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-19 black">
+            <h2><sup>69.</sup> Graph Dex</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/graph_dex_bot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-20 black">
+            <h2><sup>70.</sup> Alpha TON</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/AlphaTonGame_Bot/start/?startapp=refid1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-3 black">
+            <h2><sup>71.</sup> 1win Token</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="http://t.me/token1win_bot/start?startapp=refId1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-21">
+            <h2><sup>72.</sup> UTXORD</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/UTXORDbot/WhoIsBithoven?startapp=5eef610e-2029-4739-a3e5-57bfbf9be9a8" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-22 black">
+            <h2><sup>73.</sup> Obix Power Tap</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/obix_bot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-23">
+            <h2><sup>74.</sup> Tomarket</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="http://t.me/Tomarket_ai_bot/app?startapp=00000aiB" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-24 black">
+            <h2><sup>75.</sup> Musk Empire</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="http://t.me/muskempire_bot/game?startapp=hero1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-25 black">
+            <h2><sup>76.</sup> Musk Crypto</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/musk_crypto_bot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-26">
+            <h2><sup>77.</sup> CML Game</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/cmlgamebot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-27">
+            <h2><sup>78.</sup> Catid Paws</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/catidpawsbot/mypaw?startapp=22NFWa" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-28 black">
+            <h2><sup>79.</sup> Frog Farm</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/frogfarmbot/frogfarm?startapp=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-29 black">
+            <h2><sup>80.</sup> Coinegg Miner</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/coinegg_miner_bot/miniapp?startapp=kBNoWEHfEAB3vyn2dPw" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-30 black">
+            <h2><sup>81.</sup> XBlast App</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/XBlastAppBot/App?startapp=LAVYDGMP" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-1">
+            <h2> <sup>82.</sup> Simple Tap</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="http://t.me/Simple_Tap_Bot/app?startapp=1719898023718" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-2 black">
+            <h2><sup>83.</sup> Billion Gems</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/billiongems_bot/?start=0431c53fbe63" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-4">
+            <h2><sup>84.</sup> Love Tap</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/lovetap_bot?start=ref_85072" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-5">
+            <h2><sup>85.</sup> Arti Tap</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/ArtiTapBot/start?startapp=referrerId1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-6">
+            <h2><sup>86.</sup> ScrooG Game</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/ScrooGgame_bot/?start=u1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-7">
+            <h2><sup>87.</sup> the Hold Coin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/theHoldCoinBot/app?startapp=ref_uaZSO7Wp" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-8">
+            <h2><sup>88.</sup> Coin Hunters Game</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/CoinHuntersGameBot/app?startapp=hunter_443f4596cfa5f165148030587015ffbc">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-9">
+            <h2><sup>89.</sup> TON Alytics</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="http://t.me/tonalytics_bot/app?startapp=dulaha39" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-10">
+            <h2><sup>90.</sup> MDAO Wallet</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/Mdaowalletbot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-11 black">
+            <h2><sup>91.</sup> Vertus App</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/vertus_app_bot/app?startapp=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-12 black">
+            <h2><sup>92.</sup> BOOM</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/boom?start=DEnCHGNwWsBrkFcFZBY71j" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-13 black">
+            <h2><sup>93.</sup> The Baboon</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/TheBaboon_Bot?start=r_1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-14 black">
+            <h2><sup>94.</sup> Cats Gang</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="http://t.me/catsgang_bot/join?startapp=3W_YLIDCm4VUShonzNoCC" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-15">
+            <h2><sup>95.</sup> Dogs House</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/dogshouse_bot/join?startapp=x32WuyKiTRSJ8W8fbGagXA" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-16 black">
+            <h2><sup>96.</sup> Bull App</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/BullApp_bot?start=1873657618_2513" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-17 black">
+            <h2><sup>97.</sup> Nothing IO</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/NothingioBot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-18">
+            <h2><sup>98.</sup> True Coin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/true_coin_bot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-19 black">
+            <h2><sup>99.</sup> Bull App</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/BullApp_bot?start=1873657618_2513" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-20 black">
+            <h2><sup>100.</sup> Dragonz Land</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/dragonz_land_bot/app?startapp=ref-667ad3305bff8a2c549ffc48" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-3 black">
+            <h2><sup>101.</sup> Mappasaurus App</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/MappasaurusAppBot/Crackasaurus?startapp=A78E850" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-21">
+            <h2><sup>102.</sup> TON Party</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/tonparty_bot/party?startapp=ref_qYT5CscP" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-22 black">
+            <h2><sup>103.</sup> Real YesCoin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/realyescoinbot?start=r_1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-23">
+            <h2><sup>104.</sup> Era Of Explorers</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="http://t.me/EraOfExplorers_bot/EOE?startapp=efd3362438e0d523458fd4b1505854a6" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-24 black">
+            <h2><sup>105.</sup> Rect Coin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/RectCoinBot/app?startapp=ref_Wn8Ndf" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-25 black">
+            <h2><sup>106.</sup> Coin Races</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/CoinRacesBot?start=DQHQKdDHdp" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-26">
+            <h2><sup>107.</sup> Chick Coop</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/chickcoopofficial_bot/chickcoop?startapp=ref_1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-27">
+            <h2><sup>108.</sup> Monke Tap</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/MonkeTapBot?start=r_1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-28 black">
+            <h2><sup>109.</sup> Joke Coin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/Jokecoin_bot?start=3463199659" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-29 black">
+            <h2><sup>110.</sup> NetCoin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/layernet_netcoin_bot/netcoin?startapp=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-30 black">
+            <h2><sup>111.</sup> Get Gamestg</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/getgamestgbot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="summary-container">
+        <div class="summary-header summary-header-1">
+            <h2> <sup>112.</sup> Sweety Verse</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/sweetyverse_bot/game?startapp=ref_1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-2 black">
+            <h2><sup>113.</sup> Not Panda</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/not_panda_bot?start=tmnCc3E8Vf" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-4">
+            <h2><sup>114.</sup> TON Moon</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/ton1moonBot/app?startapp=invitedBy1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-5">
+            <h2><sup>115.</sup> TON Station</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/tonstationgames_bot/app?startapp=ref_n58rvjo7ybajkduff8gfsd" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-6">
+            <h2><sup>86.</sup> Slerf App</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/slerfapp_bot/app?startapp=SL006FADBF12" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    
+    <!--
+    <div class="summary-container">
+        <div class="summary-header summary-header-7">
+            <h2><sup>87.</sup> the Hold Coin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/theHoldCoinBot/app?startapp=ref_uaZSO7Wp" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-8">
+            <h2><sup>88.</sup> Coin Hunters Game</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/CoinHuntersGameBot/app?startapp=hunter_443f4596cfa5f165148030587015ffbc">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-9">
+            <h2><sup>89.</sup> TON Alytics</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="http://t.me/tonalytics_bot/app?startapp=dulaha39" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-10">
+            <h2><sup>90.</sup> MDAO Wallet</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/Mdaowalletbot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-11 black">
+            <h2><sup>91.</sup> Vertus App</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/vertus_app_bot/app?startapp=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-12 black">
+            <h2><sup>92.</sup> BOOM</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/boom?start=DEnCHGNwWsBrkFcFZBY71j" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-13 black">
+            <h2><sup>93.</sup> The Baboon</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/TheBaboon_Bot?start=r_1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-14 black">
+            <h2><sup>94.</sup> Cats Gang</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="http://t.me/catsgang_bot/join?startapp=3W_YLIDCm4VUShonzNoCC" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-15">
+            <h2><sup>95.</sup> Dogs House</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/dogshouse_bot/join?startapp=x32WuyKiTRSJ8W8fbGagXA" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-16 black">
+            <h2><sup>96.</sup> Bull App</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/BullApp_bot?start=1873657618_2513" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-17 black">
+            <h2><sup>97.</sup> Nothing IO</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/NothingioBot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-18">
+            <h2><sup>98.</sup> True Coin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/true_coin_bot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-19 black">
+            <h2><sup>99.</sup> Bull App</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/BullApp_bot?start=1873657618_2513" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-20 black">
+            <h2><sup>100.</sup> Dragonz Land</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/dragonz_land_bot/app?startapp=ref-667ad3305bff8a2c549ffc48" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-3 black">
+            <h2><sup>101.</sup> Mappasaurus App</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/MappasaurusAppBot/Crackasaurus?startapp=A78E850" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-21">
+            <h2><sup>102.</sup> TON Party</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/tonparty_bot/party?startapp=ref_qYT5CscP" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-22 black">
+            <h2><sup>103.</sup> Real YesCoin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/realyescoinbot?start=r_1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-23">
+            <h2><sup>104.</sup> Era Of Explorers</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="http://t.me/EraOfExplorers_bot/EOE?startapp=efd3362438e0d523458fd4b1505854a6" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-24 black">
+            <h2><sup>105.</sup> Rect Coin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/RectCoinBot/app?startapp=ref_Wn8Ndf" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-25 black">
+            <h2><sup>106.</sup> Coin Races</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/CoinRacesBot?start=DQHQKdDHdp" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-26">
+            <h2><sup>107.</sup> Chick Coop</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/chickcoopofficial_bot/chickcoop?startapp=ref_1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-27">
+            <h2><sup>108.</sup> Monke Tap</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/MonkeTapBot?start=r_1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-28 black">
+            <h2><sup>109.</sup> Joke Coin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/Jokecoin_bot?start=3463199659" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-29 black">
+            <h2><sup>110.</sup> NetCoin</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/layernet_netcoin_bot/netcoin?startapp=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+    <div class="summary-container">
+        <div class="summary-header summary-header-30 black">
+            <h2><sup>111.</sup> Get Gamestg</h2>
+        </div>
+        <div class="summary-content">
+            <button>
+                <a href="https://t.me/getgamestgbot?start=1873657618" target="_blank">Mainkan</a>
+            </button>
+        </div>
+    </div>
+
+
+-->
+
+    <div class="summary-container">
+        <div class="summary-header summary-header-1 summary-content">
+            <button>
+                <a href="https://nelsenpro.github.io/game.io/index.html" target="_blank"><< Kembali ke Halaman 1</a>
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
