@@ -1,19 +1,11 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>http://t.me/nelsenn</title>
-    <style>
-:root {
-        --primary: #007bff;
-        --success: #28a745;
-        --danger: #dc3545;
-        --info: #17a2b8;
-        --warning: #ffc107;
-        --dark: #343a40;
-    }
-
+    <title>Game List</title>
+    <style type="text/css" media="all">
+        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
@@ -21,581 +13,148 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
-            margin: 0;
+            padding: 20px;
+        }
+
+        /* Header and Footer Styles */
+        header, footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        header h3, footer h3 {
+            font-size: 2em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Heading Styles */
+        .container h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            color: #007bff;
+        }
+
+        /* List Styles */
+        ul {
+            list-style: none;
             padding: 0;
         }
-        .container {
-            
-        }
 
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #333;
-        }
-
-        h1 {
-            color: #fff;
-            font-size: 32px;
-        }
-        footer {
-            background-color: #333;
-            padding: 20px;
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 10px;
-            border-top: 1px solid #ddd;
-        }
-
-        footer h4 {
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        footer a {
-            color: yellow;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .games-container {
-            padding: 20px;
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 6px;
+            transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+            align-items: center;
         }
 
-        .game {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 300px;
-            transition: transform 0.3s ease;
+        li:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
-        .game:hover {
-            transform: translateY(-15px);
-        }
-
-        .game h2 {
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .game a {
+        li::before {
+            content: '>';
+            color: #007bff;
+            font-weight: bold;
             display: inline-block;
-            padding: 10px 20px;
-            color: #fff;
+            width: 1em;
+            margin-right: 0.5em;
+        }
+
+        a {
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            margin-top: 10px;
-            width: 100%;
-            max-width: 200px;
+            color: #343a40;
+            font-size: 1.1em;
+            font-weight: 500;
+            flex-grow: 1;
+            transition: color 0.2s;
         }
 
-        .button-primary {
-            background-color: var(--primary);
+        a:hover {
+            color: #007bff;
         }
 
-        .button-success {
-            background-color: var(--success);
-        }
+@media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
 
-        .button-danger {
-            background-color: var(--danger);
-        }
+            .container {
+                padding: 20px;
+            }
 
-        .button-info {
-            background-color: var(--info);
-        }
+            header h3, footer h3 {
+                font-size: 1.5em;
+            }
 
-        .button-warning {
-            background-color: var(--warning);
-        }
+            .container h3 {
+                font-size: 1.5em;
+            }
 
-        .button-dark {
-            background-color: var(--dark);
-        }
-
-        .game a:hover {
-            filter: brightness(95%);
-        }
-
-@media (max-width: 600px) {
-            .game {
-                width: 100%;
+            a {
+                font-size: 1em;
             }
         }
-        
-        #scrollToTopBtn {
-  position: fixed;
-  bottom: 50px;
-  right: 8px;
-  padding: 10px;
-  font-size: 40px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  display: none;
-}
-
-#scrollToTopBtn:hover {
-  background-color: #0056b3;
-}
-.info {
-    color: #3fa;
-    font-family: 12px;
-}
-.top, .bottom {
-    width: 100%;
-}
-.topme {
-    font-size: 18px;
-    font-weight: bold;
-}
-.btnsm {
-  padding: 0.25rem 0.5rem !important;
-  font-size: 18px !important;
-  border-radius: 0.2rem !important;
-  text-decoration: none;
-  color: #fff;
-}
     </style>
-    <link rel="icon" href="#" type="image/x-icon">
-    <script src="sweetalert2@11.js"></script>
 </head>
 <body>
     <header>
-        <h1>Game Crypto iMe & Telegram</h1>
-        <hr />
-        <br />
-         
-            <a href="https://referral.imem.app/1aeFdtHTNCL48UJ6A" target="_blank" class="button-warning btnsm">Download iMe</a>
-            <a href="https://telegram.org/dl" target="_blank" class="button-info btnsm">Download Telegram</a>
-           
-           <br /> <br /> <hr /> <br />
-        <p class="info">
-            Kumpulkan koin, Kerjakan Tugas & Swap (Airdrop)
-        </p>
-        <br />
-        <hr /> <br />
-    
-            <a href="https://t.me/dogshouse_bot/join?startapp=x32WuyKiTRSJ8W8fbGagXA" target="_blank" class="button-danger btnsm">Dogs</a>
-            <a href="https://t.me/catsgang_bot/join?startapp=3W_YLIDCm4VUShonzNoCC" target="_blank" class="button-success btnsm">Cats</a>
-              <a href="https://t.me/PigshouseBot?start=1873657618" target="_blank" class="button-warning btnsm">Pigs</a>
-              <br /> <br />
-            <a href="https://t.me/duckscoop_bot/app?startapp=F3I0XCgzk5" target="_blank" class="button-info btnsm">Ducks</a>
-              <a href="https://t.me/monkeycost_bot/app?startapp=r_1873657618" target="_blank" class="button-primary btnsm">Monkey</a>
-               <a href="https://t.me/BlumCryptoBot/app?startapp=ref_VbcuKrIvnT" target="_blank" class="button-danger btnsm">BLUM</a>
-        
-           
+        <h3>Klik untuk Mainkan</h3>
     </header>
-    
- 
-    <script>
-    Swal.fire({
-        icon: 'info',
-        //title: 'Halo',
-        text: 'Jika link tidak berfungsi, Coba Buka di Chrome',
-        confirmButtonText: 'OK'
-    });
-</script>
-    
-    <button onclick="scrollToTop()" id="scrollToTopBtn">^</button>
-
-    <div class="games-container">
-        <div class="game top">
-            <a href="https://nelsenpro.github.io/game.io/new.html" target="_blank" class="button-success topme">Proyek Baru disini</a>
-            
-            <a href="https://nelsenpro.github.io/game.io/index2.html" target="_blank" class="button-danger">Ke Halaman 2 >></a>
-        </div>
+    <div class="container">
+        <h3>P2E</h3>
+        <ul class="game-list">
+            <li><a href="https://t.me/hamster_koMbat_bot/start?startapp=kentId1873657618" target="_blank">🐹 Hamster Kombat</a></li>
+            <li><a href="https://t.me/tapswap_mirror_2_bot?start=r_1873657618" target="_blank">🔄 TapSwap</a></li>
+            <li><a href="https://t.me/cherrygame_io_bot/game?startapp=r_1873657618" target="_blank">🍒 Cherry Game</a></li>
+            <li><a href="https://t.me/catizenbot/gameapp?startapp=r_3_22714727" target="_blank">🐱 Catizen</a></li>
+            <li><a href="https://t.me/wormfare_slap_bot/start?startapp=ref_1873657618" target="_blank">🔫 Wormfare Slap</a></li>
+        </ul>
     </div>
-          <div class="games-container">  
-        <div class="game">
-            <h2><sup>1.</sup> Hamster Kombat & Dam</h2>
-            <a href="https://t.me/hamsteR_kombat_bot/start?startapp=kentId1873657618" target="_blank" class="button-danger">Mainkan Kombat</a>
-            
-            <a href="https://t.me/HamsterdamPlayBot/game?startapp=240006" target="_blank" class="button-info">Mainkan Dam</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>2.</sup> Yescoin</h2>
-            <a href="https://t.me/theYescoin_bot/Yescoin?startapp=5JXQhq" target="_blank" class="button-primary">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>3.</sup> Catizen</h2>
-            <a href="https://t.me/catizenbot/gameapp?startapp=rp_22714727" target="_blank" class="button-success">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>4.</sup> PixelTap</h2>
-            <a href="https://t.me/pixelversexyzbot?start=1873657618" target="_blank" class="button-info">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>5.</sup> TapSwap</h2>
-            <a href="https://t.me/tapswap_mirror_1_bot?start=r_1873657618" target="_blank" class="button-warning">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>6.</sup> Memeland</h2>
-            <a href="https://t.me/metaland_bot/click?startapp=1873657618" target="_blank" class="button-dark">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>7.</sup> TapCoins</h2>
-            <a href="https://t.me/TapCoinsBot?start=ref_fYXkwh" target="_blank" class="button-danger">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>8.</sup> Gemz</h2>
-            <a href="https://t.me/gemzcOin_bot/tap?startapp=22nfwA-UHGvbPrQbRWy2viz" target="_blank" class="button-primary">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>9.</sup> W-Coin</h2>
-            <a href="https://t.me/wcoin_tapbot?start=MTg3MzY1NzYxOA==" target="_blank" class="button-success">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>10.</sup> HoldCoin</h2>
-            <a href="https://t.me/theHoldCoinBot/app?startapp=ref_uaZSO7Wp" target="_blank" class="button-info">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>11.</sup> Gold Verse</h2>
-            <a href="https://t.me/GoldVerseBot/app?startapp=ref_Db8hHn" target="_blank" class="button-warning">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>12.</sup> Time Farm Crypto</h2>
-            <a href="https://t.me/TimeFarmCryptoBot?start=12llgq0LPeWD23YvQ" target="_blank" class="button-dark">Mainkan</a>
-        </div>
-        <div class="game">
-            <h2><sup>13.</sup> MemeFi Coin</h2>
-            <a href="https://t.me/memefi_coin_bot?start=r_13a8b38c1b" target="_blank" class="button-primary">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>14.</sup> Foxton Master</h2>
-            <a href="https://t.me/foxtonmaster_bot?start=1873657618" target="_blank" class="button-success">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>15.</sup> The Rocket</h2>
-            <a href="https://t.me/The_Rocket_bot?start=r_1873657618" target="_blank" class="button-info">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>16.</sup> BFD Coin</h2>
-            <a href="https://t.me/BFDCoin_bot?start=1873657618" target="_blank" class="button-warning">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>17.</sup> Cyber Finance</h2>
-            <a href="https://t.me/CyberFinanceBot?start=cj1nenp3d1VTdVlESTMmdT1yZWY=" target="_blank" class="button-dark">Mainkan</a>
-        </div>
-        <div class="game">
-            <h2><sup>18.</sup> Dormint</h2>
-            <a href="https://t.me/dormint_bot?start=1873657618" target="_blank" class="button-primary">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>19.</sup> NOTMEME</h2>
-            <a href="https://t.me/NOTMEMEAppBot?start=rmkh97" target="_blank" class="button-success">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>20.</sup> Iceberg</h2>
-            <a href="t.me/IcebergAppBot?start=referral_1873657618" target="_blank" class="button-info">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>21.</sup> Diamore Crypto</h2>
-            <a href="https://t.me/DiamoreCryptoBot/app?startapp=1873657618" target="_blank" class="button-warning">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>22.</sup> Clydetap</h2>
-            <a href="https://t.me/clydetapbot/clyde?startapp=1873657618" target="_blank" class="button-dark">Mainkan</a>
-        </div>
-        
-          <div class="game">
-            <h2><sup>23.</sup> BBQ Coin</h2>
-            <a href="https://t.me/BBQcoin_bot/BBQcoin?startapp=r_1873657618" target="_blank" class="button-danger">Mainkan</a>
-        </div>
-        
-        
-        <div class="game">
-            <h2><sup>24.</sup> Dotcoin</h2>
-            <a href="https://t.me/dotcoin_bot?start=r_1873657618" target="_blank" class="button-primary">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>25.</sup> BNB GameFi</h2>
-            <a href="https://t.me/bnbgamefi_bot/play?startapp=1873657618" target="_blank" class="button-success">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>26.</sup> PocketFi</h2>
-            <a href="https://t.me/pocketfi_bot/Mining?startapp=1873657618" target="_blank" class="button-info">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>27.</sup> Cubes?</h2>
-            <a href="https://t.me/cubesonthewater_bot/Cubes?startapp=0-from-4870224&startApp=0-from-4870224" target="_blank" class="button-warning">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>28.</sup> Lumacoin</h2>
-            <a href="https://t.me/lumacoinbot?start=1873657618" target="_blank" class="button-dark">Mainkan</a>
-        </div>
-        <div class="game">
-            <h2><sup>29.</sup> Brrrrr Game</h2>
-            <a href="https://t.me/brrrrrgamebot?start=668098670b03bba4cc833e22" target="_blank" class="button-primary">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>30.</sup> Time TON</h2>
-            <a href="https://t.me/TimeTONbot?start=nelsenn" target="_blank" class="button-success">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>31.</sup> CEX.IO</h2>
-            <a href="https://t.me/cexio_tap_bot?start=1718981138199451" target="_blank" class="button-info">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>32.</sup> TON Party</h2>
-            <a href="https://t.me/tonparty_bot/party?startapp=ref_qYT5CscP" target="_blank" class="button-warning">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>33.</sup> White Bunny</h2>
-            <a href="https://t.me/whitebunnywtf_bot?start=ref6680786a01f83b545dbd8480" target="_blank" class="button-dark">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>34.</sup> ZigZag</h2>
-            <a href="https://t.me/ZigZagWorldBot/zigzag?startapp=1873657618" target="_blank" class="button-danger">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>35.</sup> Hexn.IO</h2>
-            <a href="t.me/hexn_bot/app?startapp=04c37791-12a2-49ae-a205-35c1959390ec" target="_blank" class="button-primary">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>36.</sup> TON Church</h2>
-            <a href="https://t.me/TonChurchBot/app?startapp=ref_vsYAeLQ9nHAWa7ne" target="_blank" class="button-success">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>37.</sup> FastX Parking</h2>
-            <a href="https://t.me/FastXParkingBot?start=1873657618" target="_blank" class="button-info">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>38.</sup> The Baboon</h2>
-            <a href="https://t.me/TheBaboon_Bot?start=r_1873657618" target="_blank" class="button-warning">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>39.</sup> Grand Combat</h2>
-            <a href="https://t.me/grandcombat_bot/start?startapp=N0i-B9VsNU" target="_blank" class="button-dark">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>40.</sup> True Coin</h2>
-            <a href="https://t.me/true_coin_bot?start=1873657618" target="_blank" class="button-danger">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>41.</sup> Topcoin Me</h2>
-            <a href="https://t.me/topcoin_me_bot?start=r_1873657618" target="_blank" class="button-primary">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>42.</sup> OrbitonX</h2>
-            <a href="https://t.me/orbitonx_bot/orbitonx?startapp=friendId1873657618" target="_blank" class="button-success">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>43.</sup> Sphynx Meme</h2>
-            <a href="https://t.me/sphynxmeme_bot/bless?startapp=jv8m3njj" target="_blank" class="button-info">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>44.</sup> Pepe Miner</h2>
-            <a href="https://t.me/pepe_miner_game_bot?start=1873657618" target="_blank" class="button-warning">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>45.</sup> Wormfare Slap</h2>
-            <a href="https://t.me/wormfare_slap_bot/start?startapp=ref_1873657618" target="_blank" class="button-dark">Mainkan</a>
-             <a href="https://dashboard.wormfare.com/referral/784D0554" target="_blank" class="button-dark">Dashboard</a>
-        </div>
-        
-          <div class="game">
-            <h2><sup>46.</sup> Gamee</h2>
-            <a href="https://t.me/gamee?start=ref_1873657618" target="_blank" class="button-danger">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>47.</sup> Blum Crypto</h2>
-            <a href="https://t.me/BlumCryptoBot/app?startapp=ref_VbcuKrIvnT" target="_blank" class="button-primary">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>48.</sup> Pocket Rocket</h2>
-            <a href="https://t.me/pocket_rocket_game_bot?start=5aa92cb0-a450-44f4-94f4-747e6b84018d" target="_blank" class="button-success">Mainkan</a>
-        </div>
-        
-        <div class="game">
-            <h2><sup>49.</sup> Pepe Kombat</h2>
-            <a href="https://t.me/pepekombat_bot/app?startapp=M4ZN6WNZQ" target="_blank" class="button-info">Mainkan</a>
-        </div>
-        
-        <div class="game">
-            <h2><sup>50.</sup> TON Boost & TON Max</h2>
-            <a href="https://t.me/tonboost_app_bot?start=7992f61e" target="_blank" class="button-warning">Mainkan TON Boost</a>
-            <a href="https://t.me/TONMax_xyz_bot?start=a0a05c31" target="_blank" class="button-warning">Mainkan TON Max</a>
-        </div>
-        <div class="game">
-            <h2><sup>51.</sup> Simple Tap Coin</h2>
-            <a href="https://t.me/Simple_Tap_Bot/app?startapp=1719898023718" target="_blank" class="button-dark">Mainkan</a>
-        </div>
-      </div>    
-         <div class="games-container ">
-                <div class="game bottom">
-            <a href="https://nelsenpro.github.io/game.io/index2.html" target="_blank" class="button-danger">Ke Halaman 2 >></a>
-            
-              <a href="https://t.me/metaland_bot/click?startapp=1873657618" target="_blank" class="button-success topme">Memeland</a>
-        </div>
-<!--
-        <div class="game">
-            <h2><sup>40.</sup> Tronix</h2>
-            <a href="" target="_blank" class="button-danger">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>41.</sup> Hexn.IO</h2>
-            <a href="" target="_blank" class="button-primary">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>42.</sup> TON Church</h2>
-            <a href="" target="_blank" class="button-success">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>43.</sup> FastX Parking</h2>
-            <a href="" target="_blank" class="button-info">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>44.</sup> The Baboon</h2>
-            <a href="" target="_blank" class="button-warning">Mainkan</a>
-        </div>
-
-        <div class="game">
-            <h2><sup>45.</sup> Grand Combat</h2>
-            <a href="" target="_blank" class="button-dark">Mainkan</a>
-        </div>
-        -->
-
+    <div class="container">
+        <h3>Farming</h3>
+        <ul class="farm-list">
+            <li><a href="https://t.me/vertus_app_bot/app?startapp=1873657618" target="_blank">🌾 Vertus App</a></li>
+            <li><a href="https://t.me/BlumCryptoBot/app?startapp=ref_VbcuKrIvnT" target="_blank">🌸 Blum Crypto</a></li>
+            <li><a href="https://t.me/claytoncoinbot/game?startapp=1873657618" target="_blank">🔵 Clayton Coin</a></li>
+            <li><a href="https://t.me/spell_wallet_bot/wallet?startapp=referral=sei12juugud09esy62z2ay03w5988f79h32m94g8vg" target="_blank">🧙 Spell Wallet</a></li>
+        </ul>
     </div>
-
+    <div class="container">
+        <h3>Rewards</h3>
+        <ul class="airdrop-list">
+            <li><a href="https://t.me/dogshouse_bot/join?startapp=x32WuyKiTRSJ8W8fbGagXA" target="_blank">🐶 Dogs</a></li>
+            <li><a href="https://t.me/major/start?startapp=1873657618" target="_blank">🌟 Major</a></li>
+        </ul>
+    </div>
     <footer>
-        <h4>
-            |
-            <a href="https://t.me/clgames_az" target="_blank">Join Grup</a>
-|
-            <a href="https://t.me/herewalletbot/app?startapp=18016620-village-290970" target="_blank">H-Wallet</a>
-|
-            <a href="https://t.me/wallet?startattach" target="_blank">T-Wallet</a>
-|
-            <a href="https://t.me/tapps_bot" target="_blank">T-Apps</a>
-            |
-            <a href="https://t.me/ston_fi" target="_blank">Ston.Fi</a>
-|
-            <a href="https://t.me/dedustBot" target="_blank">Dedust.io</a> |
-        </h4>
+        <h3>Happy Stay 😊🏡🌞</h3>
     </footer>
-    
-    <script>
-    function ubahTombol(button) {
-        button.style.backgroundColor = "#009688"; /* Teal */
-        button.style.color = "#FFFFFF";
-        button.style.border = "2px solid #009688";
-        button.textContent = "Telah Dipilih";
-    }
-
-    const buttons = document.querySelectorAll('.game a');
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            ubahTombol(button);
-        });
-    });
-</script>
-
-<!--
-function ubahTombol(button) {
-    button.style.backgroundColor = "#008080";
-    button.style.color = "#FFFFFF";
-    button.style.border = "2px solid #008080";
-    button.textContent = "Telah Dipilih";
-    
-    localStorage.setItem(button.id, "selected");
-}
-
-const buttons = document.querySelectorAll('.game a');
-buttons.forEach(button => {
-    if (localStorage.getItem(button.id) === "selected") {
-        ubahTombol(button);
-    }
-
-    button.addEventListener('click', function() {
-        ubahTombol(button);
-    });
-});
--->
-
-<script type="text/javascript" charset="utf-8">
-    window.onscroll = function() {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollToTopBtn.style.display = "block";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
-}
-
-function scrollToTop() {
-  var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-  if (currentPosition > 0) {
-    window.requestAnimationFrame(scrollToTop);
-    window.scrollTo(0, currentPosition - currentPosition / 8);
-  }
-}
-</script>
 </body>
 </html>
