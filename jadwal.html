@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NelsenX Projects Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .table-container {
+            max-width: 100%;
+            overflow-x: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            -webkit-overflow-scrolling: touch; /* Untuk scroll yang lebih halus pada iOS */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #0056b3; /* Warna biru gelap untuk kontras yang lebih baik */
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 16px; /* Ukuran font yang lebih besar untuk header */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Warna latar belakang baris genap */
+        }
+
+        tr:hover {
+            background-color: #e9ecef; /* Warna latar belakang saat hover */
+        }
+
+        @media (max-width: 600px) {
+            th, td {
+                padding: 8px;
+            }
+
+            th {
+                font-size: 14px;
+            }
+
+            td {
+                font-size: 13px;
+            }
+
+            table {
+                font-size: 12px; /* Mengurangi ukuran font tabel pada perangkat kecil */
+            }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Projects Listings on CEX</div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Project</th>
+                    <th>Listing</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>🍅 Tomarket</td>
+                    <td>September 2024</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>🔄 TapSwap</td>
+                    <td>September 2024</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>🌿 Blum</td>
+                    <td>September 2024</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>🐹 Hamster Kombat</td>
+                    <td>September 2024</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>🐼 Panda</td>
+                    <td>September 2024</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>🏆 Major</td>
+                    <td>September 2024</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>🐐 Goat</td>
+                    <td>September 2024</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>💛 YesCoin</td>
+                    <td>September 2024</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>🏰 X-Empire</td>
+                    <td>September 2024</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>🐶 DWAG</td>
+                    <td>October 2024</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>⏳ Time Farm</td>
+                    <td>November 2024</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>🏛️ CEX.IO</td>
+                    <td>December 2024</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>💰 BCoin 2048</td>
+                    <td>December 2024</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>💡 Simple Coin</td>
+                    <td>January 2025</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer">
+            by $NelsenX
+        </div>
+    </div>
+</body>
+</html>
